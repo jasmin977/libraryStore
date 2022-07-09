@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Acceuil{% endblock %}
+
+{% block body %}
+<h1> Bienvenue dans notre bibliothèque virtuelle </h1>
+<h3> Nous vous proposons les livres selons les categories suivantes : </h3>
+    {% for cats in cat %}
+      La Categorie :  <b><a href="">{{ cats.nom }} </a></b> contient
+       <b><a href=""> {{ cats.livre.count}} </a></b> livre. <br>
+
+    {% endfor %}
+
+
+{% endblock %}
